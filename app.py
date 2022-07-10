@@ -27,17 +27,7 @@ HISTOTEMP= """
 
 """
 
-ERRORTEM="""
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <title>Something went wrong</title>
-    </head>
-    <body>
-    <h1> Wrong Inputs</h1>
-    <p> Something went wrong</p>
-    </body>
-    </html>
+
 """
 TEMPLATE = """
 <!DOCTYPE html>
