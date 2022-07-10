@@ -111,7 +111,22 @@ def main():
         if len(ans) == 0:
           template = Template(ERRORTEM)
           content = template.render()
-        
+      else:
+            maxi=0
+            averg = 0
+            sumi = 0
+            no_of_datapoint = len(ans)
+            l =[]
+            for i in ans:
+                if maxi < int(i[2]):
+                    maxi = int(i[2])
+                sumi = sumi+int(i[2])
+                l.append(int(i[2]))
+            averg = sumi / no_of_datapoint
+            template = Template(ERRORTEM)
+            content = template.render(averg = averg , maxi = maxi)
+            plt.hit(l)
+            plt.savefig('image.png')  
     else:
         template = Template(ERRORTEM)
         content = template.render()
